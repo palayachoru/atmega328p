@@ -1,0 +1,21 @@
+CompileFlags:
+  Add:
+    # Force clangd to cross-compile for AVR
+    - "-target"
+    - "avr"
+
+    # Tell clangd which chip you are using (e.g., ATmega328P)
+    - "-D__AVR_ATmega328P__"
+
+    # Architecture Core Macro (Fixes the Preprocessor Crash seen in <avr/io.h>)
+    - "-D__AVR_ARCH__=5"
+
+    # Fallback Macros to satisfy avr/sfr_defs.h
+    - "-D__ASM_HAS_NO_INLINE__"
+    - "-D__GNUC__=11"
+
+    # Provide the include paths for your AVR system headers
+    - "-isystem"
+    - "/usr/avr/include"
+    - "-isystem"
+    - "/usr/lib/avr/include"
