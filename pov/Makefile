@@ -4,7 +4,7 @@ F_CPU      = 16000000UL
 PORT       = /dev/ttyACM0
 BAUD       = 115200
 PROGRAMMER = stk500v1
-FILE       = invaders
+FILE       = cylon_eye
 
 # Generate the executable
 $(FILE).bin: $(FILE).c
