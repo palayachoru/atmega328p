@@ -1,4 +1,4 @@
-#include "../util/usart.h"
+#include "../../util/usart.h"
 
 /* NOTE: to view this in computer: screen /dev/ttyACM0 9600 */
 

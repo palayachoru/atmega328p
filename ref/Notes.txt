@@ -1,0 +1,11 @@
+- By  default, access to serial ports like /dev/ttyACM0 is blocked
+- Serial ports belongs to group 'dialout'
+- Add your user to that group to get access to serial ports
+
+sudo usermod -aG dialout $USER
+
+
+
+- to send & recieve data via serial communication (USART)
+
+screen /dev/ttyACM0 9600
